@@ -1,3 +1,4 @@
+
 import Main from './component/Main ';
 import ClickToEdit from './component/ClickToEdit';
 import AutoComplete from './component/AutoComplete';
@@ -18,6 +19,7 @@ function App() {
         <Route path="/Modal" element={<Modal />} />
         <Route path="/Tab" element={<Tab />} />
         <Route path="/Toggle" element={<Toggle />} />
+        <Main
       </Routes>
     </BrowserRouter>
   );
