@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+### 제가 구현한 기능은 총 5가지 입니다.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<details>
+  <summary>ClickToEdit</summary>
+  
+  <img src="https://user-images.githubusercontent.com/74212632/153619774-1afb9098-ce41-4620-9d5f-a2ac84d73433.gif">
 
-## Available Scripts
+ * 이름과 나이를 input박스에 적으면 정리된 문장으로 Return됩니다. usestate에 저장된 e.target.value를 보여줍니다. 
+ 
+</details>
 
-In the project directory, you can run:
 
-### `npm start`
+<details>
+  <summary>Modal</summary>
+  
+  <img src="https://user-images.githubusercontent.com/74212632/153616658-5d56f2af-125c-4fc0-9bc2-0f14ba18528e.gif">
+ 
+ * 오픈버튼 클릭 시, 모달창이 띄어주는 순서로 작동됩니다. 이슈로는 x버튼이 아닌 모달창 클릭 시, 모달창이 꺼지는 현상이 발생했습니다. 이유는  해당 태그만이 클릭 이벤트를 감지하는 것이 아니라 태그를 감싸고 있는 부모 태그들도 클릭 이벤트를 인식하고 반응하는 버블업 현상이 때문이라고 판단되었습니다. 해결책으로는 event.stopPropagation()을 사용하여 상위요소로 해당 이벤트를 전달하지 않고 자신만 이벤트를 감지하도록 적용하여 모달창을 눌렀을 때 이벤트가 발생하는 문제를 해결했습니다. 추후 개선점으로 모달창 회색 배경을 클릭할 경우 모달창이 꺼지는 상태로 남아있습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</details>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+<details>
+  <summary>Tab</summary>
+  
+  <img src="https://user-images.githubusercontent.com/74212632/153618773-e3d57f7e-bc6e-40dc-96c5-624a077abbc8.gif">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Tab 이름과 관련 문구를 배열로 정의하고 map 메서드를 적용했습니다. 이벤트 발생시 핸들러로 전달된 index번호와 map메서드에 index번호의 동일함을 판단해 해당 value값을 나타냈습니다. 총3개인 Tab을 클릭 할 경우, Tab 위치가 고정되지 않고 움직이는 현상이 발생했습니다. 이를 해결하기위해 flex-grow를 사용해서 동일한 자리를 나누어 줄 수 있었습니다.
+</details>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<details>
+  <summary>Tag</summary>
+  
+  <img src="https://user-images.githubusercontent.com/74212632/153699294-978d45fb-725a-4e1f-ab39-6107ee635c1c.gif">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  * 같은 단어는 넣을 수 없게 alert기능을 추가했습니다.  
 
-### `npm run eject`
+</details>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<details>
+  <summary>Toggle</summary>
+  
+  <img src="https://user-images.githubusercontent.com/74212632/153618799-ca98fd10-b7ee-4e28-a3c5-4633cfd9281b.gif">
+  
+  *라이브러리 없는 구현은 처음 이었습니다. usestate상태 변화를 통해서 태그 className을 삼항연산자를 사용해 변경해주면서 토글 스위치 움직임을 구현했습니다. transition과 linear-gradien를 통해 자연스럽게 색이 채워지는 모습을 구현했습니다.
+</details>
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
