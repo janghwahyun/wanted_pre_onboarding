@@ -21,8 +21,6 @@ export const Tag = () => {
       event.target.value = '';
     } else if (event.key === 'Enter' && !value) {
       event.target.value = '';
-    } else if (tags.includes(value)) {
-      return window.alert('같은 단어는 넣을 수 없습니다 ^^');
     }
   };
 

@@ -36,12 +36,12 @@ const ToggleContainer = styled.div`
     background-position: right;
     background: linear-gradient(to left, grey 50%, purple 50%) right;
     background-size: 200%;
-    /* transition: 1s; */
+    transition: 1s;
     &.toggle--checked {
       background-position: left;
       background: linear-gradient(to right, purple 50%, grey 50%) left;
       background-size: 200%;
-      /* transition: 1s; */
+      transition: 1s;
     }
   }
 

@@ -71,10 +71,10 @@ const ModalView = styled.div`
   justify-content: center;
   align-items: center;
   background-color: white;
-  width: 50%;
+  width: 20%;
   height: 10%;
-  border-radius: 30px;
-  position: relative;
+  border-radius: 1rem;
+  position: absolute;
   font-weight: bold;
   color: purple;
 
